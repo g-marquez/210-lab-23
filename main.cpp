@@ -1,3 +1,9 @@
+//*****************************************************************************
+// COMSC-210 | Lab 23 | Gabriel Marquez
+// Description: this program updates upgrades our previous Goat Manager 3000
+// version with a new GM3K1 version that uses an std::list.
+//*****************************************************************************
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -35,3 +41,22 @@ int main() {
     return 0;
 }
 
+//description: select_goat() displays a menu, allowing the user to input an
+// integer to reference the correct goat
+//arguments: a Goat list object
+//returns: an integer that references a specific Goat object in the passed list
+int select_goat(list<Goat> trip) {
+
+}
+
+//description: delete_goat() deletes a Goat object from the passed list
+//arguments: a Goat list object passed by reference
+//returns: void
+void delete_goat(list<Goat> &trip) {
+
+}
+
+//description: add_goat() adds a Goat object to the passed list
+//arguments: a Goat list object passed by reference, a string array of names,
+// a string array of colors
+//returns: void
