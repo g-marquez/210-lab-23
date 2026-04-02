@@ -1,4 +1,9 @@
 // Goat.h
+//*****************************************************************************
+// COMSC-210 | Lab 23 | Gabriel Marquez
+// Description: this program updates upgrades our previous Goat Manager 3000
+// version with a new GM3K1 version that uses an std::list.
+//*****************************************************************************
 
 #ifndef GOAT_H
 #define GOAT_H
