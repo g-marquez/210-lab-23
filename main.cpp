@@ -144,7 +144,7 @@ void display_trip(list<Goat> trip) {
 //arguments: N/A
 //returns: an integer used as the user's choice for what operation to perform
 int main_menu() {
-    int choice;
+    string choice;
     cout << "*** GOAT MANAGER 3001 ***" << endl;
     cout << "[1] Add a goat" << endl
          << "[2] Delete a goat" << endl
@@ -152,5 +152,6 @@ int main_menu() {
          << "[4] Quit" << endl;
     cout << "Choice --> ";
     cin >> choice;
+    while (!choice.isdigit())
     return choice;
 }
