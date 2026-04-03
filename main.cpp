@@ -85,9 +85,9 @@ void delete_goat(list<Goat> &trip) {
     //first, check if list is empty
     if (trip.empty()) {
         cout << "Sorry, list empty!" << endl;
-        return;
+        cout << endl;
     }
-    //if not empty select a goat to delete
+    //if not empty, select a goat to delete
     else {
         int selection = select_goat(trip);
 
@@ -97,6 +97,7 @@ void delete_goat(list<Goat> &trip) {
             it++;
         //use iterator to delete selected goat
         trip.erase(it);
+        cout << "Goat deleted!" << endl << endl;
     }
 }
 
@@ -115,17 +116,27 @@ void add_goat(list<Goat> &trip, string n[], string c[]) {
     trip.push_back(temp);
     cout << temp.get_name() << " " << "(" << temp.get_age() << ", " 
          << temp.get_color() << ") added to the trip." << endl;
+    cout << endl;
 }
 
 //description: display_trip() displays the contents of the passed list
 //arguments: a Goat list object
 //returns: void
 void display_trip(list<Goat> trip) {
-    cout << "Current trip:" << endl;
-    for (Goat g : trip) {
-        cout << g.get_name() << " " << "(" << g.get_age() << ", "
-             << g.get_color() << ")" << endl;
+    //first, check if list is empty
+    if (trip.empty()) {
+        cout << "Sorry, list empty!" << endl;
+        cout << endl;
     }
+    //if not empty, display list
+    else {
+        cout << "Current trip:" << endl;
+        for (Goat g : trip) {
+            cout << g.get_name() << " " << "(" << g.get_age() << ", "
+                << g.get_color() << ")" << endl;
+        }
+    }
+    cout << endl;
 }
 
 //description: main_menu() displays the menu options that give the user options
