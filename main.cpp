@@ -126,7 +126,6 @@ void display_trip(list<Goat> trip) {
     //first, check if list is empty
     if (trip.empty()) {
         cout << "Sorry, list empty!" << endl;
-        cout << endl;
     }
     //if not empty, display list
     else {
@@ -152,6 +151,9 @@ int main_menu() {
          << "[4] Quit" << endl;
     cout << "Choice --> ";
     cin >> choice;
-    while (!choice.isdigit())
-    return choice;
+    while (choice != "1" && choice != "2" && choice != "3" && choice != "4") {
+        cout << "Invalid choice, try again --> ";
+        cin >> choice;
+    }
+    return stoi(choice);
 }
