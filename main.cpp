@@ -60,3 +60,21 @@ void delete_goat(list<Goat> &trip) {
 //arguments: a Goat list object passed by reference, a string array of names,
 // a string array of colors
 //returns: void
+void add_goat(list<Goat> &trip, string n[], string c[]) {
+
+}
+
+//description: display_trip() displays the contents of the passed list
+//arguments: a Goat list object
+//returns: void
+void display_trip(list<Goat> trip) {
+
+}
+
+//description: main_menu() displays the menu options that give the user options
+// of what do do in the program
+//arguments: N/A
+//returns: an integer used as the user's choice for what operation to perform
+int main_menu() {
+    
+}
