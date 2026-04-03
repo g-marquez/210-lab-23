@@ -70,6 +70,12 @@ int select_goat(list<Goat> trip) {
     int selection;
     cout << "Selection --> ";
     cin >> selection;
+    //validate selection
+    while (selection < 1 || selection > count) {
+        cout << "Please choose a valid selection --> ";
+        cin >> selection;
+    }
+    return selection;
 }
 
 //description: delete_goat() deletes a Goat object from the passed list
@@ -101,6 +107,8 @@ void add_goat(list<Goat> &trip, string n[], string c[]) {
     //and push to trip list
     Goat temp(goat_name, goat_age, goat_color);
     trip.push_back(temp);
+    cout << temp.get_name() << " " << "(" << temp.get_age() << ", " 
+         << temp.get_color() << ") added to the trip." << endl;
 }
 
 //description: display_trip() displays the contents of the passed list
