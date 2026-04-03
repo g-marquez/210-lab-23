@@ -90,7 +90,13 @@ void delete_goat(list<Goat> &trip) {
     //if not empty select a goat to delete
     else {
         int selection = select_goat(trip);
-        trip.erase(selection);
+
+        //use iterator to traverse the list
+        auto it = trip.begin();
+        for (int i = 0; i < selection && it != trip.end(); ++i)
+            it++;
+        //use iterator to delete selected goat
+        trip.erase(it);
     }
 }
 
@@ -115,7 +121,7 @@ void add_goat(list<Goat> &trip, string n[], string c[]) {
 //arguments: a Goat list object
 //returns: void
 void display_trip(list<Goat> trip) {
-
+    
 }
 
 //description: main_menu() displays the menu options that give the user options
