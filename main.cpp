@@ -49,7 +49,7 @@ int main() {
         }
         choice = main_menu();
     }
-    
+
     cout << "Goodbye" << endl;
     return 0;
 }
@@ -89,5 +89,13 @@ void display_trip(list<Goat> trip) {
 //arguments: N/A
 //returns: an integer used as the user's choice for what operation to perform
 int main_menu() {
-
+    int choice;
+    cout << "*** GOAT MANAGER 3001 ***" << endl;
+    cout << "[1] Add a goat" << endl
+         << "[2] Delete a goat" << endl
+         << "[3] List goats" << endl
+         << "[4] Quit" << endl;
+    cout << "Choice --> ";
+    cin >> choice;
+    return choice;
 }
