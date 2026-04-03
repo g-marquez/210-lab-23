@@ -66,12 +66,15 @@ int select_goat(list<Goat> trip) {
 //arguments: a Goat list object passed by reference
 //returns: void
 void delete_goat(list<Goat> &trip) {
+    //first, check if list is empty
     if (trip.empty()) {
         cout << "Sorry, list empty!" << endl;
         return;
     }
+    //if not empty select a goat to delete
     else {
-
+        int selection = select_goat(trip);
+        trip.erase(selection);
     }
 }
 
