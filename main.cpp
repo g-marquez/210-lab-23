@@ -59,14 +59,20 @@ int main() {
 //arguments: a Goat list object
 //returns: an integer that references a specific Goat object in the passed list
 int select_goat(list<Goat> trip) {
-
+    cout << "Which goat would you like to delete?" << endl;
 }
 
 //description: delete_goat() deletes a Goat object from the passed list
 //arguments: a Goat list object passed by reference
 //returns: void
 void delete_goat(list<Goat> &trip) {
+    if (trip.empty()) {
+        cout << "Sorry, list empty!" << endl;
+        return;
+    }
+    else {
 
+    }
 }
 
 //description: add_goat() adds a Goat object to the passed list
