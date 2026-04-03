@@ -42,9 +42,9 @@ int main() {
     int choice = main_menu();
     while (choice != 4) {
         switch (choice) {
-            case 1: add_goat(trip, names, colors);
-            case 2: delete_goat(trip);
-            case 3: display_trip(trip);
+            case 1: add_goat(trip, names, colors); break;
+            case 2: delete_goat(trip); break;
+            case 3: display_trip(trip); break;
             default: if (choice != 4) cout << "Invalid choice, try again" << endl;
         }
         choice = main_menu();
@@ -93,7 +93,7 @@ void delete_goat(list<Goat> &trip) {
 
         //use iterator to traverse the list
         auto it = trip.begin();
-        for (int i = 0; i < selection && it != trip.end(); ++i)
+        for (int i = 0; i < selection - 1 && it != trip.end(); ++i)
             it++;
         //use iterator to delete selected goat
         trip.erase(it);
@@ -121,7 +121,11 @@ void add_goat(list<Goat> &trip, string n[], string c[]) {
 //arguments: a Goat list object
 //returns: void
 void display_trip(list<Goat> trip) {
-    
+    cout << "Current trip:" << endl;
+    for (Goat g : trip) {
+        cout << g.get_name() << " " << "(" << g.get_age() << ", "
+             << g.get_color() << ")" << endl;
+    }
 }
 
 //description: main_menu() displays the menu options that give the user options
