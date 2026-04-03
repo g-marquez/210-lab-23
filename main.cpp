@@ -45,7 +45,7 @@ int main() {
             case 1: add_goat(trip, names, colors); break;
             case 2: delete_goat(trip); break;
             case 3: display_trip(trip); break;
-            default: if (choice != 4) cout << "Invalid choice, try again" << endl;
+            //don't need default case since main_menu() already validates
         }
         choice = main_menu();
     }
@@ -143,6 +143,7 @@ void display_trip(list<Goat> trip) {
 //arguments: N/A
 //returns: an integer used as the user's choice for what operation to perform
 int main_menu() {
+    //read choice as a string, then convert to help with input validation
     string choice;
     cout << "*** GOAT MANAGER 3001 ***" << endl;
     cout << "[1] Add a goat" << endl
@@ -151,9 +152,11 @@ int main_menu() {
          << "[4] Quit" << endl;
     cout << "Choice --> ";
     cin >> choice;
+    //check if input string is anything except for numbers 1-4
     while (choice != "1" && choice != "2" && choice != "3" && choice != "4") {
         cout << "Invalid choice, try again --> ";
         cin >> choice;
     }
+    //convert to int and return if input is valid
     return stoi(choice);
 }
