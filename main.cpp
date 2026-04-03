@@ -74,8 +74,14 @@ void delete_goat(list<Goat> &trip) {
 // a string array of colors
 //returns: void
 void add_goat(list<Goat> &trip, string n[], string c[]) {
+    //randomly select name, age, color for new Goat
     string goat_name = n[rand() % SZ_NAMES];
-    string goat_age = c[rand() % SZ_COLORS];
+    string goat_color = c[rand() % SZ_COLORS];
+    int goat_age = rand() % MAX_AGE;
+    //create Goat object with full parameter constructor
+    //and push to trip list
+    Goat temp(goat_name, goat_age, goat_color);
+    trip.push_back(temp);
 }
 
 //description: display_trip() displays the contents of the passed list
