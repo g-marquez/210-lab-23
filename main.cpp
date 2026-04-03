@@ -60,6 +60,16 @@ int main() {
 //returns: an integer that references a specific Goat object in the passed list
 int select_goat(list<Goat> trip) {
     cout << "Which goat would you like to delete?" << endl;
+    int count = 0;
+    for (Goat g : trip) {
+        cout << "[" << count + 1 << "] " << g.get_name()
+             << " " << "(" << g.get_age() << ", " 
+             << g.get_color() << ")" << endl;
+        count++;
+    }
+    int selection;
+    cout << "Selection --> ";
+    cin >> selection;
 }
 
 //description: delete_goat() deletes a Goat object from the passed list
