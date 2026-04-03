@@ -35,9 +35,22 @@ int main() {
     while (fin1 >> colors[i++]);
     fin1.close();
 
+    //create an empty Goat list using default constructor
+    list<Goat> trip;
 
-
-
+    //display main menu for program
+    int choice = main_menu();
+    while (choice != 4) {
+        switch (choice) {
+            case 1: add_goat(trip, names, colors);
+            case 2: delete_goat(trip);
+            case 3: display_trip(trip);
+            default: if (choice != 4) cout << "Invalid choice, try again" << endl;
+        }
+        choice = main_menu();
+    }
+    
+    cout << "Goodbye" << endl;
     return 0;
 }
 
@@ -76,5 +89,5 @@ void display_trip(list<Goat> trip) {
 //arguments: N/A
 //returns: an integer used as the user's choice for what operation to perform
 int main_menu() {
-    
+
 }
