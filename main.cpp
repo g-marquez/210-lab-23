@@ -74,7 +74,8 @@ void delete_goat(list<Goat> &trip) {
 // a string array of colors
 //returns: void
 void add_goat(list<Goat> &trip, string n[], string c[]) {
-
+    string goat_name = n[rand() % SZ_NAMES];
+    string goat_age = c[rand() % SZ_COLORS];
 }
 
 //description: display_trip() displays the contents of the passed list
